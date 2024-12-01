@@ -9,7 +9,6 @@ import { ThemeProvider } from '~/app/(main)/ThemeProvider'
 import { zhCN } from '~/lib/clerkLocalizations'
 import { sansFont } from '~/lib/font'
 import { seo } from '~/lib/seo'
-import { url } from 'inspector'
 
 export const metadata: Metadata = {
   metadataBase: seo.url,
@@ -50,7 +49,8 @@ export const metadata: Metadata = {
     description: seo.description,
   },
   alternates: {
-    canonical: url('/'),
+    // canonical: url('/'),
+    canonical: '/',
     types: {
       'application/rss+xml': [{ url: 'rss', title: 'RSS 订阅' }],
     },
