@@ -6,7 +6,6 @@ import { ClerkProvider } from '@clerk/nextjs'
 import type { Metadata, Viewport } from 'next'
 
 import { ThemeProvider } from '~/app/(main)/ThemeProvider'
-import { url } from '~/lib'
 import { zhCN } from '~/lib/clerkLocalizations'
 import { sansFont } from '~/lib/font'
 import { seo } from '~/lib/seo'
@@ -14,11 +13,11 @@ import { seo } from '~/lib/seo'
 export const metadata: Metadata = {
   metadataBase: seo.url,
   title: {
-    template: '%s | Cali Castle',
+    template: '%s | Slowisfast',
     default: seo.title,
   },
   description: seo.description,
-  keywords: 'Cali,Cali Castle,郭晓楠,佐玩,创始人,CEO,开发者,设计师,细节控,创新',
+  keywords: 'Slowisfast,开发者',
   manifest: '/site.webmanifest',
   robots: {
     index: true,
@@ -34,10 +33,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | Cali Castle',
+      template: '%s | Slowisfast',
     },
     description: seo.description,
-    siteName: 'Cali Castle',
+    siteName: 'Slowisfast',
     locale: 'zh_CN',
     type: 'website',
     url: 'https://cali.so',
@@ -50,7 +49,8 @@ export const metadata: Metadata = {
     description: seo.description,
   },
   alternates: {
-    canonical: url('/'),
+    // canonical: url('/'),
+    canonical: '/',
     types: {
       'application/rss+xml': [{ url: 'rss', title: 'RSS 订阅' }],
     },
